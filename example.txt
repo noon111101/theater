@@ -1,0 +1,58 @@
+Example REST API
+
+host: http://101.96.66.219:8005
+###
+
+DELETE {host}/api/theater/geojson/6154981a1ebc9c20c505be11
+
+###
+
+GET {host}/api/theater/geojson
+
+###
+
+GET {host}/api/theater/geojson?limit=2
+
+###
+
+GET {host}/api/theater/geojson/61542685ae926fd844b86b77
+
+###
+
+POST {host}/api/theater/geojson
+Content-Type: application/json
+
+{
+  "geometry": {
+    "type": "Point",
+    "coordinates": [-97.429245, 32.804398]
+  },
+  "properties": {
+    "address": {
+      "street1": "5944 Quebec St",
+      "city": "Fort Worth",
+      "state": "TX",
+      "zipcode": 76135
+    }
+  }
+}
+
+###
+
+PUT {host}/api/theater/geojson/61542685ae926fd844b86b77
+Content-Type: application/json
+
+{
+  "geometry": {
+    "type": "Point",
+    "coordinates": [-97.429245, 32.804398]
+  },
+  "properties": {
+    "address": {
+      "street1": "5944 Quebec St",
+      "city": "Fort Worth",
+      "state": "TX",
+      "zipcode": 76135
+    }
+  }
+}

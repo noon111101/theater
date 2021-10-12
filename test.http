@@ -1,0 +1,51 @@
+DELETE http://localhost:8005/api/theater/geojson/6157fbd1871ad12ffe56580a
+
+###
+GET http://localhost:8005/api/theater/geojson
+
+###
+GET http://localhost:8005/api/theater/geojson/box?_ne=-156.97952270507827,21.616579336740656&_sw=-158.855438232422,21.063997063245793
+
+###
+GET http://localhost:8005/api/theater/geojson?limit=2
+
+###
+GET http://localhost:8005/api/theater/geojson/61542685ae926fd844b86b77
+
+###
+POST http://localhost:8005/api/theater/geojson
+Content-Type: application/json
+
+{
+  "geometry": {
+    "type": "Point",
+    "coordinates": [-97.429245, 1]
+  },
+  "properties": {
+    "address": {
+      "street1": "van yen",
+      "city": "yen bai",
+      "state": "",
+      "zipcode": 123456
+    }
+  }
+}
+
+###
+PUT http://localhost:8005/api/theater/geojson/61542685ae926fd844b86b77
+Content-Type: application/json
+
+{
+  "geometry": {
+    "type": "Point",
+    "coordinates": [-97.429245, 90]
+  },
+  "properties": {
+    "address": {
+      "street1": "van yen",
+      "city": "yen bai",
+      "state": "Viet Nam",
+      "zipcode": 2605
+    }
+  }
+}
